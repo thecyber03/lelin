@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function BrandLogo() {
   return (
-    <Link to="/" className="font-[Boska-Light] text-4xl">
-      Nasara
+    <Link to="/" className="font-[Boska-Light] text-4xl ">
+      LELIN
     </Link>
   )
 }

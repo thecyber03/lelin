@@ -14,7 +14,7 @@ export default function ReactRouter() {
     <div>
       <Routes>
         <Route path="/" element={<><Home /> <Footer/> </>} />
-        <Route path="/product/:id" element={<ProductView />} />
+        <Route path="/product/:id" element={<><ProductView /> <Footer/> </>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/s" element={<Search />} />
