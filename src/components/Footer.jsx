@@ -39,8 +39,8 @@ const Footer = () => {
             <h2 className="text-lg font-semibold">Quick Links</h2>
             <ul className="mt-2 space-y-0">
               <li>
-                <a href="https://" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-red-100">
-                  Nasara Admin Panel
+                <a href="https://lelin-admin-front.vercel.app" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-red-100">
+                  LELIN Admin Panel
                 </a>
               </li>
             </ul>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-500">
-          Aziz Ansari © 2025 NASARA. All rights reserved.
+          Aziz Ansari © 2025 LELIN. All rights reserved.
         </div>
       </div>
     </footer>

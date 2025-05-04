@@ -28,7 +28,7 @@ export default function NavbarMenu({ isActive, setIsActive }) {
     { name: "Github", url: "https://github.com/thecyber03" },
     { name: "LinkedIn", url: "https://linkedin.com/in/aziz ansari" },
     { name: "abdulaziz86723@gmail.com", url: "mailto:abdulaziz86723@gmail.com" },
-    { name: "nasara's admin panel", url: "https://" },
+    { name: "lelin's admin panel", url: "https://lelin-admin-front.vercel.app" },
   ];
 
   return (
