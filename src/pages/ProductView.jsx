@@ -36,11 +36,11 @@ export default function ProductView({ product: selectedProduct, onSelectProduct 
       </div>
 
       {/* ✅ Thumbnails */}
-      <div className="mb-4 bg-gray-100 h-24 w-full rounded flex gap-2 p-2 overflow-x-auto">
+      <div className="mb-4 bg-black  h-24 w-full rounded flex gap-2 p-2 overflow-x-auto">
         {product.images?.map((img, i) => (
           <img key={i} src={img} loading="lazy" 
             className={`h-20 w-20 object-cover rounded cursor-pointer border ${
-              selectedImg === img ? "border-black" : "border-transparent"
+              selectedImg === img ? "border-white" : "border-transparent"
             }`}
             onClick={() => setSelectedImg(img)}
           />
@@ -49,12 +49,12 @@ export default function ProductView({ product: selectedProduct, onSelectProduct 
 
 
       {/* ✅ Title appears after image */}
-      <h1 className="text-2xl font-bold">{product.title}</h1>
+      <h1 className="text-2xl font-bold text-white">{product.title}</h1>
 
       <p className="text-gray-500 text-xs">{product.quantity || 500} {product.unit || "gm"}</p>
 
       <div className="flex justify-between items-center">
-        <p className="text-gray-700 font-semibold text-lg">₹{product.price}</p>
+        <p className="text-white font-semibold text-lg">₹{product.price}</p>
         <AddToCartButton product={product} />
       </div>
 
@@ -62,14 +62,14 @@ export default function ProductView({ product: selectedProduct, onSelectProduct 
 
       {/* ✅ Product Description - Ensures it's always displayed */}
       <div className="mt-4 border-t pt-4">
-        <h2 className="text-lg font-semibold">Product Description</h2>
+        <h2 className="text-lg font-semibold text-white">Product Description</h2>
         <p className="text-gray-600 text-sm mt-2" dangerouslySetInnerHTML={{ __html: product.description.replace(/\n/g, "<br/>") }} />
      </div>
 
       {/* ✅ Related Products Section */}
       {relatedProducts.length > 0 ? (
         <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-3">Related Products</h2>
+          <h2 className="text-xl font-semibold mb-3 text-white">Related Products</h2>
           <div className="flex gap-4 overflow-x-auto scrollbar-hide">
             {relatedProducts.map((item) => (
               <div key={item._id} className="w-1/2 min-w-[50%]">
@@ -79,13 +79,13 @@ export default function ProductView({ product: selectedProduct, onSelectProduct 
           </div>
         </div>
       ) : (
-        <p className="text-gray-500 text-sm mt-4">No related products found.</p>
+        <p className=" text-sm mt-4 text-white">No related products found.</p>
       )}
 
       {/* ✅ Explore More Section (Already Working) */}
       {exploreProducts.length > 0 && (
         <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-3">Explore More</h2>
+          <h2 className="text-xl font-semibold mb-3 text-white">Explore More</h2>
           <div className="flex gap-4 overflow-x-auto scrollbar-hide">
             {exploreProducts.map((item) => (
               <div key={item._id} className="w-1/2 min-w-[50%]">

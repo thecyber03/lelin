@@ -45,7 +45,7 @@ export default function Login() {
 
   return (
     <div className="h-[85vh] flex justify-center items-end lg:items-center">
-      <div className="bg-white w-[85vw] lg:w-[30vw] p-3 shadow rounded mb-16 lg:mb-0">
+      <div className="bg-zinc-950 border border-white w-[85vw] lg:w-[30vw] p-3 shadow rounded mb-16 lg:mb-0">
         <div className="w-full text-center">
         <BrandLogo/>
         </div>
@@ -56,7 +56,7 @@ export default function Login() {
           value={step === 1 ? email : otp} 
           onChange={(e) => (step === 1 ? setEmail(e.target.value) : setOtp(e.target.value))} 
         />
-        {step !== 1 && <p className="text-xs text-gray-500">OTP sent at email <bold className="text-black font-bold">{email}</bold></p>}
+        {step !== 1 && <p className="text-xs text-gray-500">OTP sent at email <bold className="text-white font-bold">{email}</bold></p>}
         {step !== 1 && <p className="text-xs text-gray-500">Check Inbox or Spam mails</p>}
 
 
@@ -79,7 +79,7 @@ export default function Login() {
 
 const InputField = ({ label, value, onChange }) => (
   <div className="flex flex-col gap-1 lg:text-xs">
-    <label>{label}</label>
-    <input type="text" value={value} onChange={onChange} className="border rounded p-2 outline-none focus:border-black w-full" />
+    <label className="text-white">{label}</label>
+    <input type="text" value={value} onChange={onChange} className="border rounded p-2 outline-none focus:border-black text-black  w-full" />
   </div>
 );

@@ -41,8 +41,9 @@ export default function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className="flex flex-col justify-center items-center h-[80vh]">
+      <div className=" bg-zinc-950 flex flex-col justify-center items-center h-[80vh]">
         <p className="text-md text-gray-500 font-semibold">Your cart is empty.</p>
+        <Link  to="/" className="bg-white font-bold rounded px-2">Shop Now</Link>
         {!user && (
           <Link to="/login">
             <p className="text-sm text-gray-500 cursor-pointer">
@@ -55,8 +56,8 @@ export default function Cart() {
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+    <div className="p-4 bg-zinc-950">
+      <h1 className="text-2xl font-bold mb-4 text-white">Your Cart</h1>
 
       {cart.map((item) => (
         <div key={item._id} className="flex items-center gap-4 border-b py-2">
@@ -69,7 +70,7 @@ export default function Cart() {
 
           {/* Product Info */}
           <div className="flex-1">
-            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <h3 className="text-lg text-white font-semibold">{item.title}</h3>
             <div className="flex gap-1">
               <p className="text-gray-500 text-sm">{item.quantity}</p>
               <p className="text-gray-500 text-sm">{item.unit}</p>
@@ -78,21 +79,21 @@ export default function Cart() {
           </div>
 
           {/* Quantity Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center text-white gap-2">
             <button
               onClick={() =>
                 item.NumberOfItem > 1
                   ? updateCartQuantity(item._id, item.NumberOfItem - 1)
                   : removeFromCart(item._id)
               }
-              className="bg-gray-300 text-gray-700 px-3 py-1 rounded-md text-lg"
+              className="bg-black text-gray-700 px-3 py-1 rounded-md text-lg"
             >
               -
             </button>
             <span className="font-semibold">{item.NumberOfItem}</span>
             <button
               onClick={() => updateCartQuantity(item._id, item.NumberOfItem + 1)}
-              className="bg-gray-300 text-gray-700 px-3 py-1 rounded-md text-lg"
+              className="bg-black text-gray-700 px-3 py-1 rounded-md text-lg"
             >
               +
             </button>
@@ -101,8 +102,8 @@ export default function Cart() {
       ))}
 
       {/* Total & Checkout Section */}
-      <div className="fixed bottom-0 left-0 w-full flex justify-between items-center border-t px-4 py-5 bg-white">
-        <p className="text-lg font-semibold">Total: ₹{totalAmount}</p>
+      <div className="fixed bottom-0 left-0   w-full flex justify-between items-center border-t px-4 py-5 bg-black">
+        <p className="text-lg  text-white font-semibold">Total: ₹{totalAmount}</p>
 
         {user ? (
           <Link to="/my-order">
@@ -111,7 +112,7 @@ export default function Cart() {
             </button>
           </Link>
         ) : (
-          <LoginButton />
+          <LoginButton  />
         )}
       </div>
     </div>

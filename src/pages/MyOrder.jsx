@@ -36,7 +36,7 @@ export default function MyOrder() {
   };
 
   if (!user) {
-    return <p className="text-center p-4">Please log in to view your orders.</p>;
+    return <p className="text-center text-white p-4">Please log in to view your orders.</p>;
   }
   
   const addressUpdate = async () => {
@@ -61,8 +61,8 @@ export default function MyOrder() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-2">My Orders</h1>
-      <div className="bg-gray-100 text-sm p-1 rounded flex justify-between items-center">
+      <h1 className="text-2xl text-white font-bold mb-2">My Orders</h1>
+      <div className="bg-black text-white text-sm p-1 rounded flex justify-between items-center">
         <p>Delivery Address: <bold className="font-semibold">{user.address}</bold></p>
         <button onClick={addressUpdate}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4"> <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" /> </svg>
@@ -70,9 +70,9 @@ export default function MyOrder() {
       </div>
 
       {orders.map((order) => (
-        <div key={order._id} className="border p-4 my-3 rounded shadow-sm bg-white">
-          <p className="text-sm bg-gray-100 p-2 rounded font-medium">Order ID: <bold className="font-semibold">{order._id}</bold></p>
-          <p className="text-sm bg-gray-100 p-2 rounded font-medium mt-2">Delivery OTP: <bold className="font-semibold">{order.deliveryOtp}</bold></p>
+        <div key={order._id} className="border p-4 my-3 rounded shadow-sm bg-black text-white">
+          <p className="text-sm bg-zinc-950 p-2 rounded font-medium">Order ID: <bold className="font-semibold">{order._id}</bold></p>
+          <p className="text-sm bg-zinc-950 p-2 rounded font-medium mt-2">Delivery OTP: <bold className="font-semibold">{order.deliveryOtp}</bold></p>
 
           {order.cart.map((item, i) => (
             <div key={i} className="my-5 pb-3 border-b border-gray-300">
@@ -92,12 +92,12 @@ export default function MyOrder() {
           ))}
 
           {/* ✅ Styled Payable Amount Section */}
-          <div className="mt-2 bg-gray-100 p-3 rounded">
+          <div className="mt-2 bg-zinc-950  p-3 rounded">
             <div className="flex justify-between text-sm">
               <span>Subtotal</span>
               <span>₹{order.cart.reduce((acc, item) => acc + item.price * item.NumberOfItem, 0)}</span>
             </div>
-            <div className="flex justify-between text-sm">
+            <div className="flex  justify-between text-sm">
               <span>GST (18%)</span>
               <span>₹{(order.totalAmount * 0.18).toFixed(2)}</span>
             </div>
@@ -115,15 +115,15 @@ export default function MyOrder() {
           {/* ✅ Order Status UI */}
           <div className="relative mb-4">
             <p className="text-sm font-semibold mb-1">Order Status</p>
-            <div className="w-full h-2 bg-gray-200 rounded-full">
+            <div className="w-full h-2 bg-zinc-700 rounded-full">
               <div className={`h-2 rounded-full ${getStatusColor(order.status)}`} style={{ width: order.status === "Pending" ? "25%" : order.status === "Shipped" ? "50%" : order.status === "Delivered" ? "100%" : "0%" }}></div>
             </div>
             <p className={`text-xs mt-1 font-medium ${getStatusColor(order.status)}`}>{order.status}</p>
           </div>
 
           {/* ✅ Payment Status UI */}
-          <div className="mt-2 bg-gray-100 p-3 rounded">
-            <div className="flex justify-between text-sm">
+          <div className="mt-2 bg-zinc-950 p-3 rounded">
+            <div className="flex  justify-between text-sm">
               <span>Payment Status</span>
               <span className={order.paymentStatus === "Paid" ? "text-green-500 font-semibold" : "text-red-500 font-semibold"}>
                 {order.paymentStatus}
@@ -132,7 +132,7 @@ export default function MyOrder() {
           </div>
 
           {/* ✅ Delivery Date UI */}
-          <div className="mt-2 bg-gray-100 p-3 rounded">
+          <div className="mt-2 bg-zinc-950 p-3 rounded">
             <div className="flex justify-between text-sm">
               <span>Estimated Delivery Date</span>
               <span className="font-semibold">{new Date(order.deliveryDate).toDateString()}</span>

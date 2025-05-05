@@ -29,11 +29,11 @@ export default function Search() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col lg:flex-row bg-zinc-950">
       {/* Left Side: Search and Results (60%) */}
       <div className="w-full lg:w-[60%]">
         {/* Search Box */}
-        <div className="mx-4 flex items-center border border-gray-300 rounded-md p-2">
+        <div className="mx-4 flex items-center bg-white mt-4  rounded-md p-2">
           <MagnifyingGlassIcon className="h-5 w-5 text-gray-500" />
           <input
             ref={inputRef}
@@ -46,7 +46,7 @@ export default function Search() {
         </div>
 
         {/* Search Results */}
-        <p className="mx-4 text-lg py-3 font-bold">Search Result</p>
+        <p className="mx-4 text-lg py-3 font-bold text-white">Search Result</p>
         <div className="mt-4 px-1 grid grid-cols-2 gap-1 lg:grid-cols-4">
         
           {searchedProducts.length === 0 ? (

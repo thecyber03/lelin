@@ -12,7 +12,7 @@ export default function Navbar() {
   
   return (
     <div>
-    <nav className="bg-white fixed top-0 left-0 z-[100] flex justify-between items-center w-full h-16 px-4 lg:p-8">
+    <nav className="bg-black fixed top-0 left-0 z-[100] flex justify-between items-center w-full h-16 px-4 lg:p-8">
       {/* Menu Icon */}
       <HamburgerMenu isActive={isActive} setIsActive={setIsActive} />
       
@@ -24,9 +24,9 @@ export default function Navbar() {
       <div className="flex items-center gap-8">
         {/*Cart Icon */}
         <Link to="/cart" className="relative">
-          <ShoppingBagIcon className="w-6 h-6 " />
+          <ShoppingBagIcon className="w-6 h-6 text-white " />
           {cart.length > 0 && (
-            <span className="absolute -bottom-1 -right-1 w-4 h-4 flex items-center justify-center bg-black text-white text-xs font-semibold rounded-full">
+            <span className="absolute -bottom-1 -right-1 w-4 h-4 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
               {cart.length}
             </span>
           )}

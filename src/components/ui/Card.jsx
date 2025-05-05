@@ -24,12 +24,12 @@ export default function Card({ product, onSelectProduct }) {
     : 0;
 
   return (
-    <div className="p-2 shadow-sm bg-white cursor-pointer">
+    <div className="p-2 shadow-sm  cursor-pointer">
       {/* Mobile: Redirect to ProductView */}
       <Link to={`/product/${product._id}`} className="block lg:hidden">
         <div>
           {Image}
-          <h3 className="truncate font-medium mt-2 lg:text-xs">
+          <h3 className="truncate font-medium mt-2 lg:text-xs text-white">
             {product.title}
           </h3>
         </div>
@@ -38,7 +38,7 @@ export default function Card({ product, onSelectProduct }) {
       {/* Large Screens: Update ProductView without redirecting */}
       <div className="hidden lg:block" onClick={() => onSelectProduct(product)}>
         {Image}
-        <h3 className="truncate font-medium mt-2 lg:text-xs">
+        <h3 className="truncate font-medium mt-2 lg:text-xs text-white">
           {product.title}
         </h3>
       </div>
@@ -46,11 +46,11 @@ export default function Card({ product, onSelectProduct }) {
       <p className="text-gray-500 text-xs">{product.quantity || 500} {product.unit || "gm"}</p>
 
       <div className="flex justify-between items-center mt-2">  
-        <span className="font-bold text-green-600">₹{product.price}</span>
+        <span className="font-bold text-white">₹{product.price}</span>
         <AddToCartButton product={product} />
       </div>
-      <div className="text-sm space-x-1">
-        <span className="line-through text-gray-500">₹{product.originalPrice}</span>
+      <div className="text-xs space-x-1">
+        <span className="line-through text-gray-100">₹{product.originalPrice}</span>
         <span className="text-sm text-red-600 font-medium">({discountPercent}% OFF)</span>
       </div>
         
