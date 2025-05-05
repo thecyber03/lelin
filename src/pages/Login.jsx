@@ -80,6 +80,6 @@ export default function Login() {
 const InputField = ({ label, value, onChange }) => (
   <div className="flex flex-col gap-1 lg:text-xs">
     <label className="text-white">{label}</label>
-    <input type="text" value={value} onChange={onChange} className="border rounded p-2 outline-none focus:border-black text-black  w-full" />
+    <input type="text" value={value} onChange={onChange} className="placeholder-gray-900 border rounded p-2 outline-none focus:border-black text-black  w-full" />
   </div>
 );

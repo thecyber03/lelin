@@ -36,7 +36,7 @@ export default function ProductView({ product: selectedProduct, onSelectProduct 
       </div>
 
       {/* ✅ Thumbnails */}
-      <div className="mb-4 bg-black  h-24 w-full rounded flex gap-2 p-2 overflow-x-auto">
+      <div className="mb-4 bg-zinc-900  h-24 w-full rounded flex gap-2 p-2 overflow-x-auto">
         {product.images?.map((img, i) => (
           <img key={i} src={img} loading="lazy" 
             className={`h-20 w-20 object-cover rounded cursor-pointer border ${

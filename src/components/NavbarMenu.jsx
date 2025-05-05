@@ -33,7 +33,7 @@ export default function NavbarMenu({ isActive, setIsActive }) {
 
   return (
     <div
-      className={`fixed z-[90] h-screen left-0 w-full bg-gray-50 p-8 
+      className={`fixed z-[90] h-[103vh] left-0 w-full bg-gray-50 p-8 
       transition-all duration-500 ease-in-out flex flex-col justify-center gap-5 
       lg:flex-row lg:items-center ${isActive ? "top-16" : "-top-[110%] opacity-0"}`}
     >

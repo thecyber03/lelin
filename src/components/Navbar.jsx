@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../API/CartContext.jsx";
-import { ShoppingBagIcon } from "@heroicons/react/24/outline";
+import { GiBeachBag } from "react-icons/gi";
 import HamburgerMenu from './ui/HamburgerMenu.jsx'
 import NavbarMenu from "./NavbarMenu.jsx";
 import BrandLogo from './ui/BrandLogo.jsx'
@@ -24,9 +24,9 @@ export default function Navbar() {
       <div className="flex items-center gap-8">
         {/*Cart Icon */}
         <Link to="/cart" className="relative">
-          <ShoppingBagIcon className="w-6 h-6 text-white " />
+          <GiBeachBag className="w-6 h-6 text-white " />
           {cart.length > 0 && (
-            <span className="absolute -bottom-1 -right-1 w-4 h-4 flex items-center justify-center bg-white text-black text-xs font-semibold rounded-full">
+            <span className="absolute -bottom-1 -right-1 w-4 h-4 flex items-center justify-center bg-green-500 text-white text-xs font-semibold rounded-full">
               {cart.length}
             </span>
           )}

@@ -33,7 +33,7 @@ export default function OuterDiv() {
   }, [index]);
 
   return (
-    <div className='relative w-full h-full bg-green-700 rounded-lg text-white overflow-hidden'>
+    <div className='relative w-full h-full bg-gray-200 rounded-lg text-white overflow-hidden'>
       {/* Carousel */}
       <div
         ref={containerRef}
