@@ -39,21 +39,25 @@ export default function Cart() {
   
 
 
-  if (cart.length === 0) {
+  if (cart?.length === 0) {
     return (
-      <div className=" bg-zinc-950 flex flex-col justify-center items-center h-[80vh]">
+      <div className="bg-zinc-950 flex flex-col justify-center items-center min-h-screen">
         <p className="text-md text-gray-500 font-semibold">Your cart is empty.</p>
-        <Link  to="/" className="bg-white font-bold rounded px-2">Shop Now</Link>
-        {!user && (
+        {!user ? (
           <Link to="/login">
             <p className="text-sm text-gray-500 cursor-pointer">
               Please <mark className="text-blue-500 underline bg-transparent font-semibold">Login</mark> to continue shopping
             </p>
           </Link>
+        ) : (
+          <Link to="/" className="bg-white font-bold rounded px-2" aria-label="Shop now">
+            Shop Now
+          </Link>
         )}
       </div>
     );
   }
+  
 
   return (
     <div className="p-4 bg-zinc-950">
