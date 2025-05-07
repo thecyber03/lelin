@@ -7,6 +7,8 @@ import SearchProduct from '../components/ui/SearchProduct.jsx'
 import { useLocation } from "react-router-dom";
 import Crousel  from "../components/Crousel.jsx";
 import GoogleAds from '../components/GoogleAds.jsx'
+import { Helmet } from 'react-helmet'
+
 
 export default function Home() {
   const { products } = useProducts();
@@ -36,6 +38,14 @@ export default function Home() {
    
   return (
    <>
+   <Helmet>
+        <title>Lelin - Trendy & Affordable Fashion</title>
+        <meta name="description" content="Shop Lelin for trendy and affordable clothing. Discover fashion that fits your style and budget." />
+        <meta name="keywords" content="Lelin, fashion, affordable fashion, trendy clothes, online clothing, streetwear, lelin brand, lelin vercel" />
+        <meta name="author" content="Lelin" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://lelin.vercel.app/" />
+      </Helmet>
 
   
     <div className="flex bg-[#E9E9EA]">
