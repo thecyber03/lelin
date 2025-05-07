@@ -90,14 +90,14 @@ export default function Cart() {
                   ? updateCartQuantity(item._id, item.NumberOfItem - 1)
                   : removeFromCart(item._id)
               }
-              className="bg-black text-gray-700 px-3 py-1 rounded-md text-lg"
+              className="bg-[#5C899D] text-white px-3 py-1 rounded-md text-lg"
             >
               -
             </button>
             <span className="font-semibold">{item.NumberOfItem}</span>
             <button
               onClick={() => updateCartQuantity(item._id, item.NumberOfItem + 1)}
-              className="bg-black text-gray-700 px-3 py-1 rounded-md text-lg"
+              className="bg-[#5C899D] text-white px-3 py-1 rounded-md text-lg"
             >
               +
             </button>
@@ -106,8 +106,8 @@ export default function Cart() {
       ))}
 
       {/* Total & Checkout Section */}
-      <div className="fixed bottom-0 left-0   w-full flex justify-between items-center border-t px-4 py-5 bg-black">
-        <p className="text-lg  text-white font-semibold">Total: ₹{totalAmount}</p>
+      <div className="fixed bottom-0 left-0   w-full flex justify-between items-center border-t px-4 py-5 bg-[#5C899D]">
+        <p className="text-lg  text-black font-semibold">Total: ₹{totalAmount}</p>
 
         {user ? (
           <Link to="/my-order">

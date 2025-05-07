@@ -38,10 +38,10 @@ export default function Home() {
    <>
 
   
-    <div className="flex bg-zinc-950">
+    <div className="flex bg-[#E9E9EA]">
       {/* Left Side: Product List (70%) */}
       <div className="w-full lg:w-[60%]">
-        <div className="fixed z-[10] pt-4 left-0 w-full bg-zinc-950 px-4 lg:w-[60%]">
+        <div className="fixed z-[10] pt-4 left-0 w-full bg-[#E9E9EA] px-4 lg:w-[60%]">
           <SearchProduct />
           <div className="overflow-x-auto whitespace-nowrap">
             {products.length === 0 ? (

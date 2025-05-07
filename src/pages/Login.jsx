@@ -45,19 +45,19 @@ export default function Login() {
 
   return (
     <div className="h-[85vh] flex justify-center items-end lg:items-center">
-      <div className="bg-zinc-950 border border-white w-[85vw] lg:w-[30vw] p-3 shadow rounded mb-16 lg:mb-0">
+      <div className="bg-[#5C899D] border  border-white w-[85vw] lg:w-[30vw] p-3 shadow rounded mb-16 lg:mb-0">
         <div className="w-full text-center">
         <BrandLogo/>
         </div>
-        <p className="text-xs text-gray-500 text-center mb-2">Login or Signup</p>
+        <p className="text-xs text-black text-center mb-2">Login or Signup</p>
        
         <InputField 
           label={step === 1 ? "Email" : "Enter OTP"} 
           value={step === 1 ? email : otp} 
           onChange={(e) => (step === 1 ? setEmail(e.target.value) : setOtp(e.target.value))} 
         />
-        {step !== 1 && <p className="text-xs text-gray-500">OTP sent at email <bold className="text-white font-bold">{email}</bold></p>}
-        {step !== 1 && <p className="text-xs text-gray-500">Check Inbox or Spam mails</p>}
+        {step !== 1 && <p className="text-xs text-zinc-800">OTP sent at email <bold className="text-black font-bold">{email}</bold></p>}
+        {step !== 1 && <p className="text-xs text-zinc-800">Check Inbox or Spam mails</p>}
 
 
         <button 
@@ -69,8 +69,8 @@ export default function Login() {
         </button>
 
 
-        <p className="text-xs text-gray-500 text-center mt-2 lg:text-[10px]">
-          Aziz Ansari © 2025 <mark className="text-blue-500 underline bg-transparent">Terms & Conditions</mark>
+        <p className="text-xs text-black text-center mt-2 lg:text-[10px]">
+          Aziz Ansari © 2025 <mark className="text-blue-700 underline bg-transparent">Terms & Conditions</mark>
         </p>
       </div>
     </div>

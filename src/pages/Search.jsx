@@ -29,7 +29,7 @@ export default function Search() {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row bg-zinc-950">
+    <div className="flex flex-col lg:flex-row bg-[#E9E9EA]">
       {/* Left Side: Search and Results (60%) */}
       <div className="w-full lg:w-[60%]">
         {/* Search Box */}
@@ -46,7 +46,7 @@ export default function Search() {
         </div>
 
         {/* Search Results */}
-        <p className="mx-4 text-lg py-3 font-bold text-white">Search Result</p>
+        <p className="mx-4 text-lg py-3 font-bold text-black">Search Result</p>
         <div className="mt-4 px-1 grid grid-cols-2 gap-1 lg:grid-cols-4">
         
           {searchedProducts.length === 0 ? (

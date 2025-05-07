@@ -9,8 +9,8 @@ const CategoryFilter = ({ categories, activeCategory, onFilter }) => {
           onClick={() => onFilter(item)}
           className={`px-2 py-1 whitespace-nowrap rounded-md border lg:text-xs ${
             activeCategory === item
-              ? "bg-white text-black border-black"
-              : "bg-zinc-950 text-white border-white"
+              ? "bg-[#5C899D] text-white border-[#5C899D]"
+              : "bg-[#E9E9EA] text-black border-[#000]"
           } transition-all`}
         >
           {item}

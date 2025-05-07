@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const photos = [
-  'https://images.unsplash.com/photo-1494879540385-bc170b0878a7',
-  'https://images.unsplash.com/photo-1501785888041-af3ef285b470',
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b',
-  'https://images.unsplash.com/photo-1596779845727-d88eb78a1b08',
-  'https://images.unsplash.com/photo-1596779845727-d88eb78a1b08',
-  'https://images.unsplash.com/photo-1596779845727-d88eb78a1b08',
+  '/img/sale1.jpg',
+  '/img/sale2.jpg',
+  '/img/sale3.jpg',
+  '/img/sale4.jpg',
+  
 ];
 
 export default function OuterDiv() {

@@ -22,7 +22,7 @@ export default function AddToCartButton({ product }) {
   return (
     <button 
       className={`px-4 py-2 rounded-md font-medium text-sm  whitespace-nowrap lg:text-[14px] lg:px-[8px] lg:py-[4px] ${
-        isInCart ? "bg-gray-500 text-white " : "bg-[#000] text-white p"
+        isInCart ? "bg-gray-500 text-white " : "bg-[#5C899D] text-white "
       }`}
       onClick={handleClick}
     >
