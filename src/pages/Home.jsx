@@ -39,13 +39,16 @@ export default function Home() {
   return (
    <>
    <Helmet>
-        <title>Lelin - Trendy & Affordable Fashion</title>
-        <meta name="description" content="Shop Lelin for trendy and affordable clothing. Discover fashion that fits your style and budget." />
-        <meta name="keywords" content="Lelin, fashion, affordable fashion, trendy clothes, online clothing, streetwear, lelin brand, lelin vercel" />
-        <meta name="author" content="Lelin" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://lelin.vercel.app/" />
-      </Helmet>
+      <title>Lelin - Create Your Online Store</title>
+      <meta name="description" content="Lelin helps local store owners create and manage their online shops easily." />
+      <meta name="keywords" content="Lelin, ecommerce, kirana, online shop, general store, vercel" />
+      <meta property="og:title" content="Lelin - Your Online Store" />
+      <meta property="og:description" content="Grow your local shop online with Lelin." />
+      <meta property="og:url" content="https://lelin.vercel.app" />
+      <meta property="og:type" content="website" />
+      <link rel="canonical" href="https://lelin.vercel.app" />
+      <link rel="icon" type="image/png" href="/img/lelin.png" />
+    </Helmet>
 
   
     <div className="flex bg-[#E9E9EA]">

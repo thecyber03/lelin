@@ -64,7 +64,7 @@ export default function Cart() {
       <h1 className="text-2xl font-bold mb-4 text-white">Your Cart</h1>
 
       {cart.map((item) => (
-        <div key={item._id} className="flex items-center gap-4 border-b py-2">
+        <div key={item._id} className="flex  items-center gap-4 border-b py-2">
           {/* Image */}
           <div className="w-16 h-16 overflow-hidden flex justify-center items-center bg-gray-100 rounded-md">
             {item.images && (
@@ -73,7 +73,7 @@ export default function Cart() {
           </div>
 
           {/* Product Info */}
-          <div className="flex-1">
+          <div className="flex-1 ">
             <h3 className="text-lg text-white font-semibold">{item.title}</h3>
             <div className="flex gap-1">
               <p className="text-gray-500 text-sm">{item.quantity}</p>
