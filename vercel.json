@@ -1,17 +1,21 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "rewrites": [
+    { 
+      "source": "/(.*)", 
+      "destination": "/" 
+    }
+  ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/(.*)",  
       "has": [
         {
           "type": "host",
           "value": "www.lelin.shop"
         }
       ],
-      "destination": "https://lelin.shop/:1",
+      "destination": "https://lelin.shop/$1",  
       "permanent": true
     }
   ]
-} 
-
+}
