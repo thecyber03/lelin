@@ -7,7 +7,7 @@ import SearchProduct from '../components/ui/SearchProduct.jsx'
 import { useLocation } from "react-router-dom";
 import Crousel  from "../components/Crousel.jsx";
 import GoogleAds from '../components/GoogleAds.jsx'
-import { Helmet } from 'react-helmet'
+
 
 
 export default function Home() {
@@ -38,19 +38,7 @@ export default function Home() {
    
   return (
    <>
-   <Helmet>
-      <title>Lelin - Create Your Online Store</title>
-      <meta name="description" content="Lelin helps local store owners create and manage their online shops easily." />
-      <meta name="keywords" content="Lelin, ecommerce, kirana, online shop, general store, vercel" />
-      <meta property="og:title" content="Lelin - Your Online Store" />
-      <meta property="og:description" content="Grow your local shop online with Lelin." />
-      <meta property="og:url" content="https://lelin.vercel.app" />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://lelin.vercel.app" />
-      <link rel="icon" type="image/png" href="/img/lelin.png" />
-    </Helmet>
-
-  
+    
     <div className="flex bg-[#E9E9EA]">
       {/* Left Side: Product List (70%) */}
       <div className="w-full lg:w-[60%]">
